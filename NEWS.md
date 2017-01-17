@@ -13,6 +13,8 @@ shiny 1.0.0.9000
 
 ### Bug fixes
 
+* Fixed ([#1511](https://github.com/rstudio/shiny/issues/1511)): `fileInput`s did not trigger the `shiny:inputchanged` event on the client. ([#1541](https://github.com/rstudio/shiny/pull/1541))
+
 ### Library updates
 
 * Closed ([#1500](https://github.com/rstudio/shiny/issues/1500)): Updated ion.rangeSlider to 2.1.6. ([#1540](https://github.com/rstudio/shiny/pull/1540))
