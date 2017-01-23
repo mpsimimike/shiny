@@ -8,3 +8,11 @@ $.extend(downloadLinkOutputBinding, {
   }
 });
 outputBindings.register(downloadLinkOutputBinding, 'shiny.downloadLink');
+
+
+// Trigger shiny:filedownload event whenever a downloadButton/Link is clicked
+$(document).on('click.shinyDownloadLink', 'a.shiny-download-link', function(e) {
+  var evt = jQuery.Event('shiny:filedownload');
+  evt.name = this.id;
+  $(document).trigger(evt);
+});
