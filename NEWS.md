@@ -14,6 +14,10 @@ in shiny apps. For more info, see the documentation (`?updateQueryString` and `?
 
 * Fixed ([#1121](https://github.com/rstudio/shiny/issues/1121)): plot interactions with ggplot2 now support `coord_fixed()`. ([#1525](https://github.com/rstudio/shiny/pull/1525))
 
+* Added `markOutputAttrs` function, which allows marking a reactive (the object returned from a render function) with attributes. When the reactive is assigned to an output value, the attributes will be extracted and assigned to the corresponding output observer. ([#1559](https://github.com/rstudio/shiny/pull/1559))
+
+* Added `shiny:filedownload` JavaScript event, which is triggered when a `downloadButton` or `downloadLink` is clicked. Also, the values of `downloadHandler`s are not recorded in test snapshots, because the values change every time the application is run. ([#1559](https://github.com/rstudio/shiny/pull/1559))
+
 ### Bug fixes
 
 ### Library updates
